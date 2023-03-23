@@ -1,0 +1,138 @@
+
+
+
+@import 'tools/mixins';
+@import 'settings/variables';
+@import 'reset/reset';
+@import 'normalize/normalize';
+@import 'layout/grid';
+@import 'layout/layout';
+@import 'components/button';
+@import 'components/typography';
+@import 'helper/helper';
+
+
+
+.best {
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.slider {
+    position: relative;
+
+    & .slick-arrow {
+        position: absolute;
+        font-size: 0;
+        width: 30px;
+        height: 30px;
+        right: 0;
+        top: -35px;
+        z-index: 10;
+        cursor: pointer;
+
+        &.slick-disabled {
+            color: var(--greyArrow);
+        }
+    }
+
+    .arrow-pre {
+        right: 55px;
+    }
+}
+
+.goods {
+    position: relative;
+    min-height: 506px;
+    padding: 14px;
+    border-radius: 10px;
+    transition: box-shadow .3s ease;
+
+    &:hover {
+        box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1)
+    }
+
+    &__favorite {
+        position: absolute;
+        top: -7px;
+        right: -9px;
+        cursor: pointer;
+    }
+
+    &__img {
+        position: relative;
+        border: 1px solid var(--lightGrey);
+        border-radius: 8px;
+        padding: 16px;
+        margin-bottom: 8px;
+    }
+
+    &__gift {
+        position: absolute;
+        left: 6px;
+        bottom: 35px;
+    }
+
+    &__percents {
+        position: absolute;
+        color: var(--white);
+        bottom: 0;
+        left: 0;
+        background: var(--darkTxt);
+        border-radius: 0px 5px 0px 5px;
+        padding: 3px 5px 3px 11px;
+    }
+
+    &__price {
+        margin-right: 8px;
+    }
+
+    &__discount {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            border: 1px solid var(--darkGrey);
+            height: 40px;
+            top: -8px;
+            right: 20px;
+            transform: rotate(80deg);
+        }
+    }
+
+    &__status {
+        margin-bottom: 8px;
+    }
+
+    &__number {
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+
+    &__icon {
+        margin-right: 8px;
+    }
+
+    &__reviews {
+        margin: 8px 0;
+    }
+
+    &__value {
+        color : var(--darkGrey);
+
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+
+    &__delivery {
+        color: var(--green);
+    }
+   
+}
+
+.slick-list {
+    padding: 5px;
+}

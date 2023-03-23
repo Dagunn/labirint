@@ -1,0 +1,28 @@
+.button {
+    padding: 10px 43px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--darkTxt);
+    border: 1px solid var(--darkTxt);
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: color, background .3s ease;
+
+    &:hover {
+        background: var(--darkTxt);
+        color: var(--white);
+    }
+
+    &--sm {
+        padding: 10px 22px;
+    }
+
+    &.remove {
+        background:red;
+        border-color: red;
+        color: var(--white);
+    }
+
+}
